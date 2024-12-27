@@ -1,0 +1,16 @@
+
+.cmpForm
+{
+    display: grid;
+    background-color: var(--bg-fondo);
+    align-items: center;
+    margin:  0 auto;
+    height:90vh;
+}
+
+.cmpForm form
+{
+    width: 30%;
+    margin: 0 auto;
+    padding: 1% ;
+}
