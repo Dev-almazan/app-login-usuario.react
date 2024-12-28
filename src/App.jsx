@@ -1,22 +1,15 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
 import 'bootstrap/dist/css/bootstrap.min.css';
-import NavbarLogin  from './components/navbar'
-import FormularioLogin from './components/login';
-import './App.css'
+import './App.css';
+import AppRouter from "./router/AppRouter";
 
-function App() {
 
+const App=()=> {
+  //definimos componente principal que manejara las rutas de la app
   return (
     <>
-      <NavbarLogin></NavbarLogin>
-      <Router>
-        <Routes>
-          <Route path="/" element={<FormularioLogin />} />
-        </Routes>
-      </Router>
+      <AppRouter />
     </>
   )
 }
 
-export default App
+export default App;

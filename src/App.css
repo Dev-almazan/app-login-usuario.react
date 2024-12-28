@@ -4,6 +4,6 @@
 :root{
   padding: 0 ;
   margin: 0;
---bg-fondo  : rgba(15, 116, 159, 0.888);
-background-color: var(--bg-fondo);
+  --bg-fondo  : rgba(15, 116, 159, 0.888);
+  background-color: var(--bg-fondo);
 }
