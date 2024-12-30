@@ -1,17 +1,17 @@
 
 
-
+import { useContext } from "react";
 import PublicRouter from "../router/PublicRouter";
-import PrivateRouter from "../router/PrivateRouter";           
+import PrivateRouter from "../router/PrivateRouter";     
+import { LoginContext } from '../context/loginContext';
+
 
 /* Componente global router que define las rutas del usuario */
  const AppRouter = () =>
 {
-   // variable global usuario utilizar use context para crear una variable global
-    const user = {
-        logged : false
-    }
-    console.log(user)
+     //variable global usuario utilizar use context 
+     const  {user}  = useContext(LoginContext);
+     console.log(user)
     return(
         <>                       
         {
