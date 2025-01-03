@@ -10,7 +10,8 @@
 
 .cmpForm form
 {
-    width: 30%;
+    width: 100%;
+    max-width: 450px;
     margin: 0 auto;
-    padding: 1% ;
+    padding: 1% 2% ;
 }

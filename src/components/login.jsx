@@ -1,13 +1,25 @@
+import useLogin from "../hooks/useLoginContext";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import './login.css'
 
-const FormularioLogin = () => {
+const FormularioLogin = (e) => {
+
+    const user = useLogin();
+    console.log(user)
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        // Aquí procesas los datos del formulario
+        user.login({
+            'name': 'Administrador 01'
+        });
+    };
 
     return (
         <>
         <div className='cmpForm'>
-                <Form className='card'>
+                <Form className='card' id={e.id} onSubmit={handleSubmit}>
                 <h1 className='text-center'>Iniciar sesión</h1>
 
                 <Form.Group className="mb-3" >

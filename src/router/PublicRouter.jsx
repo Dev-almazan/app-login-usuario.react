@@ -10,7 +10,7 @@ import ErrorPage from '../components/Error404/error404';
              <>               
                 <Router>
                     <Routes>
-                        <Route path="/" element={<FormularioLogin />} />
+                        <Route path="/" element={<FormularioLogin id={'FormLogin'} user={'eee'} />} />
                         <Route path="*" element={<ErrorPage />} />
                     </Routes>
                 </Router>
