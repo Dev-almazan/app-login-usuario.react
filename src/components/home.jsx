@@ -7,7 +7,7 @@ const HomeCrm =()=> {
     return (
         <>
             <Container className='mt-3'>
-                <h1 className='tex-center'>Bienvenido {user.data.name}</h1>
+                <h1 className='tex-center'>Bienvenido {user.data.email}</h1>
             </Container>
         </>
     );
