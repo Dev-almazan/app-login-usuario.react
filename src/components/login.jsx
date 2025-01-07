@@ -7,7 +7,6 @@ import './login.css'
 
 const FormularioLogin = (e) => {
     const user = useLogin();
-    console.log(user)
 
     const [email, setEmail] = useState('');
     const [pass, setPass] = useState('');
@@ -39,7 +38,6 @@ const FormularioLogin = (e) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(errors)
-
                 if(errors.email == '' && errors.pass == '')
                 {
                     // Aquí procesas los datos del formulario
@@ -51,8 +49,7 @@ const FormularioLogin = (e) => {
                 {
                     setGlobalError('Favor de completar todos los campos.');
                 }
-                
-
+            
     };
 
     return (
@@ -63,14 +60,19 @@ const FormularioLogin = (e) => {
                     {globalError && <> <small className="alert alert-danger">{globalError}</small></>}
                 <Form.Group className="mb-3" >
                     <h6 className="text-secondary">Dirección de email</h6>
-                        <Form.Control type="email" onChange={handleChange(setEmail)} name="email" />
-                        {errors.email && <> <small className="text-left text-danger p-1">{errors.email}</small></>}
+                        <Form.Control type="email" onChange={handleChange(setEmail)} name="email" isInvalid={!!errors.email}
+                            aria-describedby="pass-error" />
+                        <Form.Control.Feedback type="invalid">
+                            {errors.email}
+                        </Form.Control.Feedback>
                 </Form.Group>
 
                 <Form.Group className="mb-3" >
                         <h6 className="text-secondary">Contraseña</h6>
-                        <Form.Control type="password" onChange={handleChange(setPass)} name="pass" />
-                        {errors.pass && <> <small className="text-left text-danger p-1">{errors.pass}</small></>}
+                        <Form.Control type="password" onChange={handleChange(setPass)} name="pass" isInvalid={!!errors.pass} />
+                        <Form.Control.Feedback type="invalid">
+                            {errors.pass}
+                        </Form.Control.Feedback>
                 </Form.Group>
                 <Button variant="primary" type="submit">
                     Iniciar Sesión
