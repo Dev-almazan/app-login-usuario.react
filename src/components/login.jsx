@@ -1,5 +1,6 @@
 
 import useLogin from "../hooks/useLoginContext";
+import { useNavigate } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useState } from "react";
@@ -7,6 +8,7 @@ import './login.css'
 
 const FormularioLogin = (e) => {
     const user = useLogin();
+    const navigate = useNavigate();
 
     const [email, setEmail] = useState('');
     const [pass, setPass] = useState('');
@@ -49,9 +51,11 @@ const FormularioLogin = (e) => {
                     const validacion = responseUser.find(user=> user.email == email && user.password == pass)
                     if(validacion)
                     {
+                     
                         user.login({
                             'email': email
                         });
+                        navigate("/home");
                     }
                     else
                     {

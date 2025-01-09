@@ -10,7 +10,7 @@ const PrivateRouter = () =>
             <NavbarCrm />
             <Router>
                 <Routes>
-                    <Route path="/" element={<HomeCrm />} />
+                    <Route path="/home" element={<HomeCrm />} />
                     <Route path="*" element={<ErrorPage />} />
                 </Routes>
             </Router>
