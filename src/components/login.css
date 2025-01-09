@@ -3,15 +3,27 @@
 {
     display: grid;
     background-color: var(--bg-fondo);
+    background-image: var(--bg-img);
     align-items: center;
     margin:  0 auto;
-    height:90vh;
+    height:100vh;
 }
 
 .cmpForm form
 {
-    width: 100%;
-    max-width: 450px;
+    width:25%;
     margin: 0 auto;
-    padding: 1% 2% ;
+padding: 1rem 1rem;
+box-sizing: border-box;
 }
+
+
+  @media screen and (max-width:1000px) {
+
+    .cmpForm form {
+            width: 80%;
+            max-width: 100%;
+            margin: 0 auto;
+        
+        }
+  }

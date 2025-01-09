@@ -40,10 +40,24 @@ const FormularioLogin = (e) => {
         console.log(errors)
                 if(errors.email == '' && errors.pass == '')
                 {
-                    // Aquí procesas los datos del formulario
-                    user.login({
-                        'email': email
-                    });
+                    // Aquí procesamos el servicio
+                    const responseUser = [{
+                        email : 'ernest_almazan@outlook.com',
+                        password : 'Xag20596'
+                    }]
+
+                    const validacion = responseUser.find(user=> user.email == email && user.password == pass)
+                    if(validacion)
+                    {
+                        user.login({
+                            'email': email
+                        });
+                    }
+                    else
+                    {
+                        setGlobalError('Usuario o contraseña incorrrecta.');  
+                    }
+                 
                 }
                 else
                 {
@@ -56,7 +70,7 @@ const FormularioLogin = (e) => {
         <>
         <div className='cmpForm'>
                 <Form className='card' id={e.id} onSubmit={handleSubmit}  >
-                <h1 className='text-center'>Iniciar sesión</h1>
+                <h2 className='text-center'>Iniciar sesión</h2>
                     {globalError && <> <small className="alert alert-danger">{globalError}</small></>}
                 <Form.Group className="mb-3" >
                     <h6 className="text-secondary">Dirección de email</h6>
