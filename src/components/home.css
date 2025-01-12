@@ -1,0 +1,21 @@
+
+    .home
+    {
+        width: 100%;
+        height: 93vh;
+        display: grid;
+        align-items: center;
+        text-align: center;
+        background-color: ghostwhite;
+    }
+
+
+  @media screen and (max-width:1000px) {
+
+    .cmpForm form {
+            width: 80%;
+            max-width: 100%;
+            margin: 0 auto;
+        
+        }
+  }

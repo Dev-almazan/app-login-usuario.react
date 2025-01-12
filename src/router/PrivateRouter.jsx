@@ -7,8 +7,8 @@ const PrivateRouter = () =>
 {
     return(
         <>  
-            <NavbarCrm />
             <Router>
+                    <NavbarCrm />
                 <Routes>
                     <Route path="/home" element={<HomeCrm />} />
                     <Route path="*" element={<ErrorPage />} />

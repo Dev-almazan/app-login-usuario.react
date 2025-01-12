@@ -1,14 +1,15 @@
-import Container from 'react-bootstrap/Container';
+
 import useLogin from '../hooks/useLoginContext';
+import "./home.css";
 
 const HomeCrm =()=> {
     const user = useLogin().user;
-    console.log(user)
+ 
     return (
         <>
-            <Container className='mt-3'>
+            <div className='home'>
                 <h1 className='tex-center'>Bienvenido {user.data.email}</h1>
-            </Container>
+            </div>
         </>
     );
 }

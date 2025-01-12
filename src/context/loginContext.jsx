@@ -1,5 +1,7 @@
 import { useState, createContext } from 'react';
 
+
+
 export const LoginContext = createContext();
 export const LoginProvider = ({ children }) => {
     const [user, setUser] = useState({
@@ -17,10 +19,12 @@ export const LoginProvider = ({ children }) => {
 
     // Función para cerrar sesión
     const logout = () => {
+        
         setUser({
             data: null,
             logged: false
         });
+   
     };
 
     return (
@@ -29,4 +33,7 @@ export const LoginProvider = ({ children }) => {
         </LoginContext.Provider>
     );
 };
+
+
+
 

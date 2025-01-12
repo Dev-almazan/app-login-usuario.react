@@ -1,0 +1,28 @@
+
+    .navbar_crm
+    {
+        width: 100%;
+        background-color: var(--bg-fondo);
+            background-image: var(--bg-img);
+       margin:  0 auto;
+    
+       box-sizing: border-box;
+    }
+
+
+    .nav-link
+    {
+
+        width: 100% !important;
+        color: #fff !important;
+    }
+
+  @media screen and (max-width:1000px) {
+
+    .cmpForm form {
+            width: 80%;
+            max-width: 100%;
+            margin: 0 auto;
+        
+        }
+  }

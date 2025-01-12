@@ -17,6 +17,12 @@ padding: 1rem 1rem;
 box-sizing: border-box;
 }
 
+.cmpForm button
+{
+    background-image: var(--bg-img) !important;
+    border: var(--bg-img) !important;
+}
+
 
   @media screen and (max-width:1000px) {
 
